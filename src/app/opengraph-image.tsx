@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { profile } from "@/data/profile";
 
-export const alt = `${profile.name} · ${profile.role}`;
+export const alt = profile.role ? `${profile.name} · ${profile.role}` : profile.name;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -128,16 +128,18 @@ export default function OpengraphImage() {
           >
             {profile.name}
           </div>
-          <div
-            style={{
-              fontSize: 27,
-              color: "#e8dfca",
-              fontFamily: "system-ui, sans-serif",
-              marginTop: 14,
-            }}
-          >
-            {profile.role}
-          </div>
+          {profile.role ? (
+            <div
+              style={{
+                fontSize: 27,
+                color: "#e8dfca",
+                fontFamily: "system-ui, sans-serif",
+                marginTop: 14,
+              }}
+            >
+              {profile.role}
+            </div>
+          ) : null}
           <div
             style={{
               fontSize: 25,

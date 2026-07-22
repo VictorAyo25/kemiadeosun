@@ -35,7 +35,7 @@ export function GET() {
   }
 
   lines.push(
-    `NOTE:${esc(profile.role)}. ${esc(profile.tagline)}`,
+    `NOTE:${profile.role ? esc(profile.role) + ". " : ""}${esc(profile.tagline)}`,
     "END:VCARD",
   );
 

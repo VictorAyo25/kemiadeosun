@@ -33,15 +33,17 @@ export default function Home() {
             </h1>
 
             {/* role with gold rules */}
-            <div className="mt-3 flex w-full items-center justify-center gap-3">
-              <span className="h-px max-w-10 flex-1 bg-line" />
-              <span className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-forest-500">
-                {profile.role}
-              </span>
-              <span className="h-px max-w-10 flex-1 bg-line" />
-            </div>
+            {profile.role && (
+              <div className="mt-3 flex w-full items-center justify-center gap-3">
+                <span className="h-px max-w-10 flex-1 bg-line" />
+                <span className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-forest-500">
+                  {profile.role}
+                </span>
+                <span className="h-px max-w-10 flex-1 bg-line" />
+              </div>
+            )}
 
-            <p className="mt-4 max-w-sm font-serif text-lg italic leading-snug text-forest">
+            <p className="mt-5 max-w-sm font-serif text-lg italic leading-snug text-forest">
               {profile.tagline}
             </p>
             <p className="mt-3 max-w-md text-[0.9rem] leading-relaxed text-muted">
@@ -82,7 +84,7 @@ export default function Home() {
           {/* ── Actions ──────────────────────────────────────── */}
           <ProfileActions
             shareUrl={SITE_URL}
-            shareTitle={`${profile.name} · ${profile.role}`}
+            shareTitle={profile.role ? `${profile.name} · ${profile.role}` : profile.name}
             shareText={profile.tagline}
           />
 

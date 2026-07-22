@@ -41,7 +41,7 @@ export const profile = {
   name: "Kemi Adeosun",
   /** eyebrow shown above the name */
   eyebrow: "Digital Card",
-  role: "Former Minister of Finance, Nigeria",
+  role: "", // (removed) shown under the name when set
   tagline: "Fundraiser & social-impact advocate for children, youth & women.",
   bio: "Economist and chartered accountant with over three decades of experience across Nigerian and international markets. Founder of two ventures dedicated to lifting communities and building enterprise across Africa.",
   location: "Nigeria · United Kingdom", // ⚠ confirm

@@ -17,11 +17,11 @@ const inter = Inter({
   display: "swap",
 });
 
-const description = `${profile.role}. ${profile.tagline} Founder of DashMe Foundation & Nidacity.`;
+const description = `${profile.role ? `${profile.role}. ` : ""}${profile.tagline} Founder of DashMe Foundation & Nidacity.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: `${profile.name} · ${profile.role}`,
+  title: profile.role ? `${profile.name} · ${profile.role}` : profile.name,
   description,
   keywords: [
     "Kemi Adeosun",
