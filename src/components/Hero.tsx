@@ -1,6 +1,5 @@
-import ProfileActions from "@/components/ProfileActions";
 import { SocialIcon, ChevronDownIcon } from "@/components/icons";
-import { profile, SITE_URL } from "@/data/profile";
+import { profile } from "@/data/profile";
 
 export default function Hero() {
   return (
@@ -35,16 +34,8 @@ export default function Hero() {
               {profile.bio}
             </p>
 
-            <ProfileActions
-              variant="onDark"
-              className="mt-8 justify-center lg:justify-start"
-              shareUrl={SITE_URL}
-              shareTitle={profile.name}
-              shareText={profile.tagline}
-            />
-
             {/* socials */}
-            <div className="mt-8 flex items-center justify-center gap-3 lg:justify-start">
+            <div className="mt-9 flex items-center justify-center gap-3 lg:justify-start">
               {profile.socials.map((s) => (
                 <a
                   key={s.label}

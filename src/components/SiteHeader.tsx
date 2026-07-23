@@ -37,7 +37,7 @@ export default function SiteHeader() {
           {profile.name}
         </a>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-8 sm:flex">
           {links.map((l) => (
             <a
               key={l.href}
@@ -50,17 +50,6 @@ export default function SiteHeader() {
             </a>
           ))}
         </nav>
-
-        <a
-          href="/api/vcard"
-          className={`inline-flex items-center rounded-full px-4 py-2 text-xs font-semibold tracking-wide transition-all duration-200 active:scale-[0.98] ${
-            scrolled
-              ? "bg-forest text-cream hover:bg-forest-700"
-              : "border border-cream/40 text-cream hover:border-cream/80 hover:bg-cream/10"
-          }`}
-        >
-          Save contact
-        </a>
       </div>
     </header>
   );

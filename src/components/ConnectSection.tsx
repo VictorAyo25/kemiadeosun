@@ -1,7 +1,6 @@
-import ProfileActions from "@/components/ProfileActions";
 import Reveal from "@/components/Reveal";
 import { SocialIcon } from "@/components/icons";
-import { profile, SITE_URL } from "@/data/profile";
+import { profile } from "@/data/profile";
 
 export default function ConnectSection() {
   return (
@@ -28,17 +27,9 @@ export default function ConnectSection() {
               Let&rsquo;s connect
             </h2>
             <p className="mx-auto mt-4 max-w-md text-[0.95rem] leading-relaxed text-cream/75 lg:mx-0">
-              Save the card to your phone in one tap, share it with someone, or
-              follow along on social.
+              Follow along on social, or scan the code to open this card on
+              another device.
             </p>
-
-            <ProfileActions
-              variant="onDark"
-              className="mt-8 justify-center lg:justify-start"
-              shareUrl={SITE_URL}
-              shareTitle={profile.name}
-              shareText={profile.tagline}
-            />
 
             <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap lg:items-start lg:justify-start">
               {profile.socials.map((s) => (
