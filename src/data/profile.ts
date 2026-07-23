@@ -24,10 +24,14 @@ export interface Venture {
   description: string;
   href: string;
   hrefLabel: string;
-  /** two-letter monogram shown in the tile */
+  /** two-letter monogram (fallback if no logo) */
   monogram: string;
   /** visual accent for the tile */
   accent: "forest" | "gold";
+  /** path to the venture's real logo (shown on a light plate) */
+  logo: string;
+  /** brand colour used for the soft glow behind the logo */
+  glow: string;
   instagram?: string;
 }
 
@@ -108,6 +112,8 @@ export const profile = {
       hrefLabel: "dashme.org",
       monogram: "DM",
       accent: "forest",
+      logo: "/logos/dashme-logo.png",
+      glow: "#3aa24b",
       instagram: "https://www.instagram.com/dashme_foundation/",
     },
     {
@@ -119,6 +125,8 @@ export const profile = {
       hrefLabel: "nidacity.com",
       monogram: "Ni",
       accent: "gold",
+      logo: "/logos/nidacity-logo.png",
+      glow: "#2f6f9c",
       instagram: "https://www.instagram.com/nidacity/",
     },
   ] satisfies Venture[],

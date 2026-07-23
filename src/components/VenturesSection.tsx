@@ -4,31 +4,29 @@ import { profile, type Venture } from "@/data/profile";
 
 function VentureFeature({ venture, index }: { venture: Venture; index: number }) {
   const reversed = index % 2 === 1;
-  const panel =
-    venture.accent === "forest"
-      ? "bg-forest text-cream"
-      : "bg-gradient-to-br from-gold-bright to-gold text-forest";
 
   return (
     <Reveal>
       <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
-        {/* visual panel */}
+        {/* logo plate */}
         <div className={reversed ? "lg:order-2" : ""}>
-          <div
-            className={`relative flex aspect-[16/10] items-center justify-center overflow-hidden rounded-3xl shadow-float ${panel}`}
-          >
+          <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden rounded-3xl border border-line bg-white p-10 shadow-float">
             <div
               aria-hidden="true"
-              className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-white/10 blur-2xl"
+              className="absolute -right-12 -top-12 h-48 w-48 rounded-full blur-3xl"
+              style={{ backgroundColor: venture.glow, opacity: 0.16 }}
             />
-            <div className="relative text-center">
-              <div className="font-serif text-[clamp(3.5rem,9vw,6rem)] font-semibold leading-none">
-                {venture.monogram}
-              </div>
-              <div className="mt-3 text-xs font-semibold uppercase tracking-[0.28em] opacity-80">
-                {venture.name}
-              </div>
-            </div>
+            <div
+              aria-hidden="true"
+              className="absolute -bottom-12 -left-12 h-40 w-40 rounded-full blur-3xl"
+              style={{ backgroundColor: venture.glow, opacity: 0.1 }}
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={venture.logo}
+              alt={`${venture.name} logo`}
+              className="relative max-h-[54%] w-auto max-w-[70%] object-contain"
+            />
           </div>
         </div>
 
