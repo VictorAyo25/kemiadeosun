@@ -18,7 +18,7 @@ const outDir = resolve(__dirname, "../public/qr");
 const url =
   process.argv[2] ||
   process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://kemi-adeosun.vercel.app";
+  "https://kemiadeosun.vercel.app";
 
 const options = {
   errorCorrectionLevel: "H", // survives a small logo / print smudges

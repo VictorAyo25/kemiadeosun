@@ -47,7 +47,7 @@ export interface FocusArea {
  *  and the vCard. Set NEXT_PUBLIC_SITE_URL in Vercel to your real domain. */
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
-  "https://kemi-adeosun.vercel.app";
+  "https://kemiadeosun.vercel.app";
 
 export const profile = {
   name: "Kemi Adeosun",
