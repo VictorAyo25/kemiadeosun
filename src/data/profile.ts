@@ -31,6 +31,14 @@ export interface Venture {
   instagram?: string;
 }
 
+export type FocusIcon = "children" | "youth" | "women";
+
+export interface FocusArea {
+  icon: FocusIcon;
+  title: string;
+  description: string;
+}
+
 /** The public URL of the deployed card. Used for QR code, share, OG tags,
  *  and the vCard. Set NEXT_PUBLIC_SITE_URL in Vercel to your real domain. */
 export const SITE_URL =
@@ -44,7 +52,32 @@ export const profile = {
   role: "", // (removed) shown under the name when set
   tagline: "Fundraiser & social-impact advocate for children, youth & women.",
   bio: "Economist and chartered accountant with over three decades of experience across Nigerian and international markets. Founder of two ventures dedicated to lifting communities and building enterprise across Africa.",
+  /** Longer intro used in the About section of the landing page. */
+  about:
+    "Kemi Adeosun is an economist and chartered accountant whose career spans over three decades across Nigerian and international markets. Today she channels that experience into two ventures: one lifting vulnerable communities, the other helping a new generation of entrepreneurs build businesses that last.",
   location: "Nigeria · United Kingdom", // ⚠ confirm
+
+  /** Three focus areas, drawn from her advocacy for children, youth & women. */
+  focus: [
+    {
+      icon: "children",
+      title: "Children",
+      description:
+        "Protecting and supporting orphaned and vulnerable children across West Africa.",
+    },
+    {
+      icon: "youth",
+      title: "Youth",
+      description:
+        "Equipping a new generation with opportunity, mentorship and the tools to build.",
+    },
+    {
+      icon: "women",
+      title: "Women",
+      description:
+        "Championing women, from survivors of abuse to founders growing businesses that last.",
+    },
+  ] satisfies FocusArea[],
   /** Photo: drop a high-res portrait at /public/profile.jpg, then set this
    *  to "/profile.jpg". Ships with an on-brand monogram placeholder. */
   photo: "/profile.jpg",

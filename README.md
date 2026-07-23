@@ -1,12 +1,16 @@
 # Kemi Adeosun · Digital Card
 
-A world-class, fully-responsive digital business card. Share the QR code and
-visitors land on a premium page with her portrait, social links, a one-tap
-**Save to Contacts** button, and profiles of her two ventures: **DashMe
-Foundation** and **Nidacity**.
+A world-class, fully-responsive landing page that doubles as a digital business
+card. Share the QR code and visitors arrive at a premium, multi-section site
+with her portrait, a one-tap **Save to Contacts** button, social links, and
+profiles of her two ventures: **DashMe Foundation** and **Nidacity**.
 
 Built with **Next.js 16 (App Router)**, **React 19**, and **Tailwind CSS v4**.
 Designed to deploy on **Vercel**.
+
+**Page structure:** sticky header, immersive hero, an About section with three
+focus areas (children, youth, women), alternating venture features, and a
+Connect section with an on-screen QR to share the card in person.
 
 ---
 
@@ -107,7 +111,8 @@ instructions.
 
 - **Editorial design:** ivory, forest-green, and gold, with Fraunces + Inter type.
 - **Perfect responsiveness:** verified with zero horizontal overflow on mobile
-  and desktop; fluid type; `prefers-reduced-motion` respected.
+  and desktop; fluid type; scroll-reveal animations that respect
+  `prefers-reduced-motion` and fall back gracefully with no JavaScript.
 - **Social share preview:** a branded Open Graph image (auto-applied to
   WhatsApp, iMessage, X, and LinkedIn) generated at `src/app/opengraph-image.tsx`.
 - **SEO:** title, description, keywords, canonical URL, robots.

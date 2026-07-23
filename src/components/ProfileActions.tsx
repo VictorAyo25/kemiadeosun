@@ -6,6 +6,8 @@ interface Props {
   shareUrl: string;
   shareTitle: string;
   shareText: string;
+  variant?: "onLight" | "onDark";
+  className?: string;
 }
 
 function DownloadIcon() {
@@ -36,7 +38,13 @@ function CheckIcon() {
   );
 }
 
-export default function ProfileActions({ shareUrl, shareTitle, shareText }: Props) {
+export default function ProfileActions({
+  shareUrl,
+  shareTitle,
+  shareText,
+  variant = "onLight",
+  className = "",
+}: Props) {
   const [copied, setCopied] = useState(false);
 
   const onShare = useCallback(async () => {
@@ -58,11 +66,21 @@ export default function ProfileActions({ shareUrl, shareTitle, shareText }: Prop
     }
   }, [shareUrl, shareTitle, shareText]);
 
+  const primary =
+    variant === "onDark"
+      ? "bg-gold text-forest hover:bg-gold-bright"
+      : "bg-forest text-cream hover:bg-forest-700";
+
+  const secondary =
+    variant === "onDark"
+      ? "border border-cream/35 text-cream hover:border-cream/70 hover:bg-cream/10"
+      : "border border-gold/45 bg-paper/70 text-forest hover:border-gold hover:bg-paper";
+
   return (
-    <div className="mt-7 grid grid-cols-1 gap-3 sm:grid-cols-[1.4fr_1fr]">
+    <div className={`flex flex-col gap-3 sm:flex-row ${className}`}>
       <a
         href="/api/vcard"
-        className="group inline-flex items-center justify-center gap-2 rounded-full bg-forest px-6 py-3.5 text-sm font-semibold tracking-wide text-cream shadow-card transition-all duration-200 hover:bg-forest-700 hover:shadow-float active:scale-[0.98]"
+        className={`inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold tracking-wide shadow-card transition-all duration-200 hover:shadow-float active:scale-[0.98] ${primary}`}
       >
         <DownloadIcon />
         Save to Contacts
@@ -71,7 +89,7 @@ export default function ProfileActions({ shareUrl, shareTitle, shareText }: Prop
         type="button"
         onClick={onShare}
         aria-live="polite"
-        className="inline-flex items-center justify-center gap-2 rounded-full border border-gold/45 bg-paper/70 px-6 py-3.5 text-sm font-semibold tracking-wide text-forest transition-all duration-200 hover:border-gold hover:bg-paper active:scale-[0.98]"
+        className={`inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold tracking-wide transition-all duration-200 active:scale-[0.98] ${secondary}`}
       >
         {copied ? (
           <>

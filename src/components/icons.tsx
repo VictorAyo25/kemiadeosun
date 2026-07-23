@@ -42,3 +42,59 @@ export function SocialIcon({
   const Cmp = map[name];
   return <Cmp {...props} />;
 }
+
+export function ArrowUpRightIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
+      <path d="M7 17 17 7M8 7h9v9" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function ChevronDownIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
+      <path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+// Focus-area icons
+function ChildrenIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
+      <path d="M12 20.5s-7-4.35-7-9.5a4 4 0 0 1 7-2.65A4 4 0 0 1 19 11c0 5.15-7 9.5-7 9.5Z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function YouthIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
+      <path d="M12 3.5 13.9 9l5.6.2-4.4 3.4 1.6 5.4L12 15l-4.7 3 1.6-5.4L4.5 9.2 10.1 9 12 3.5Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function WomenIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>
+      <path d="M12 12c2.5 0 4.5-2.2 4.5-5S14.5 2.5 12 4.8C9.5 2.5 7.5 4.2 7.5 7S9.5 12 12 12Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+      <path d="M12 12v9m-3-3h6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+const focusMap = {
+  children: ChildrenIcon,
+  youth: YouthIcon,
+  women: WomenIcon,
+} as const;
+
+export function FocusIcon({
+  name,
+  ...props
+}: { name: keyof typeof focusMap } & IconProps) {
+  const Cmp = focusMap[name];
+  return <Cmp {...props} />;
+}
