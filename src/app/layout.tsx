@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "Nigeria Minister of Finance",
     "AfreximBank",
     "Ogun State Commissioner for Finance",
-    "chartered accountant",
+    "Chartered Accountant",
     "social impact",
     "philanthropy",
   ],
