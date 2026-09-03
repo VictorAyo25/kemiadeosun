@@ -9,7 +9,8 @@ Built with **Next.js 16 (App Router)**, **React 19**, and **Tailwind CSS v4**.
 Designed to deploy on **Vercel**.
 
 **Page structure:** sticky header, immersive hero, an About section with three
-focus areas (children, youth, women), alternating venture features, and a
+focus areas (children, youth, women), a Journey section with her career,
+public-service timeline and qualifications, alternating venture features, and a
 Connect section with an on-screen QR to share the card in person.
 
 ---

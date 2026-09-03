@@ -37,6 +37,29 @@ export default function AboutSection() {
             </Reveal>
           ))}
         </div>
+
+        {/* Away from the work */}
+        <Reveal
+          delay={120}
+          className="mx-auto mt-14 max-w-3xl border-t border-line pt-10 text-center"
+        >
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-gold">
+            Away from the work
+          </p>
+          <p className="mt-4 font-serif text-lg italic leading-relaxed text-ink sm:text-xl">
+            {profile.interests.lead}
+          </p>
+          <ul className="mt-6 flex flex-wrap items-center justify-center gap-2.5">
+            {profile.interests.likes.map((like) => (
+              <li
+                key={like}
+                className="rounded-full border border-line bg-paper/70 px-4 py-1.5 text-sm text-muted"
+              >
+                {like}
+              </li>
+            ))}
+          </ul>
+        </Reveal>
       </div>
     </section>
   );

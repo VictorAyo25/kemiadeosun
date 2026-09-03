@@ -22,7 +22,7 @@ export default function Hero() {
           {/* text */}
           <div className="rise order-2 text-center lg:order-1 lg:text-left">
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-gold">
-              Fundraiser · Advocate · Founder
+              {profile.eyebrow}
             </p>
             <h1 className="mt-4 font-serif font-semibold leading-[1.02] tracking-tight text-cream [font-size:clamp(2.75rem,8vw,4.75rem)]">
               {profile.name}
