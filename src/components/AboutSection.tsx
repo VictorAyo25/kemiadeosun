@@ -13,9 +13,11 @@ export default function AboutSection() {
           <h2 className="mt-3 font-serif text-[clamp(1.9rem,4.5vw,2.75rem)] font-semibold leading-tight tracking-tight text-ink">
             Experience in service of impact
           </h2>
-          <p className="mt-5 text-lg leading-relaxed text-muted">
-            {profile.about}
-          </p>
+          <div className="mt-5 space-y-4 text-lg leading-relaxed text-muted">
+            {profile.about.map((para) => (
+              <p key={para.slice(0, 32)}>{para}</p>
+            ))}
+          </div>
         </Reveal>
 
         <div className="mt-14 grid gap-5 sm:grid-cols-3 sm:gap-6">
