@@ -74,7 +74,7 @@ export const profile = {
   bio: "Economist, chartered accountant and finance professional with over 35 years across Nigerian and international markets. Nigeria's Minister of Finance from 2015 to 2018, and today the founder of two ventures lifting communities and building enterprise across Africa.",
   /** Longer intro used in the About section of the landing page. */
   about:
-    "Kemi Adeosun is an economist, chartered accountant and finance professional whose career spans more than 35 years across Nigeria and international markets, with a proven track record of delivery. She served as Nigeria's Minister of Finance from November 2015 to September 2018, chairing the Board of the African Export-Import Bank during her tenure, and as Commissioner for Finance in Ogun State before that. Today she channels that experience into two ventures: one mobilising resources for the most vulnerable, the other helping a new generation of entrepreneurs build businesses that last.",
+    "Kemi Adeosun is an economist, chartered accountant and finance professional whose career spans more than 35 years across Nigeria and international markets, with a proven track record of delivery. She served as Nigeria's Minister of Finance from November 2015 to September 2018, chairing the Board of the African Export-Import Bank during her tenure, and as Commissioner for Finance in Ogun State before that. Today, she channels that experience into two ventures: one mobilising resources for the most vulnerable, the other helping a new generation of entrepreneurs build businesses that last.",
   location: "Nigeria · United Kingdom", // ⚠ confirm
 
   /** Three focus areas, drawn from her advocacy for children, youth & women. */
