@@ -67,17 +67,17 @@ export const SITE_URL =
 export const profile = {
   name: "Kemi Adeosun",
   /** eyebrow shown above the name in the hero */
-  eyebrow: "Economist · Advocate · Founder",
+  eyebrow: "Former Finance Minister · Founder",
   /** shown under the name, in the page title, OG card and vCard note */
   role: "Economist & Chartered Accountant",
-  tagline: "Championing children, youth & women across West Africa.",
-  bio: "Economist, Chartered Accountant and finance professional with over 35 years across Nigerian and international markets. Nigeria's Minister of Finance from 2015 to 2018, and today the founder of two ventures lifting communities and building enterprise across Africa.",
+  tagline: "Backing vulnerable children, young people and women.",
+  bio: "Economist and Chartered Accountant with more than 35 years in finance, in Nigeria and abroad. Nigeria's Minister of Finance from 2015 to 2018. Founder of DashMe Foundation and Nidacity.",
   /** Longer intro used in the About section of the landing page.
    *  One string per paragraph. */
   about: [
-    "Kemi Adeosun is an economist, Chartered Accountant and finance professional whose career spans more than 35 years across Nigeria and international markets, with a proven track record of delivery.",
-    "She served as Nigeria's Minister of Finance from November 2015 to September 2018, chairing the Board of the African Export-Import Bank during her tenure, and as Commissioner for Finance in Ogun State before that.",
-    "Today, she channels that experience into two ventures: one mobilising resources for the most vulnerable, the other helping a new generation of entrepreneurs build businesses that last.",
+    "Kemi Adeosun is an economist and Chartered Accountant who has worked in finance for more than 35 years, in Nigeria and abroad.",
+    "She was Nigeria's Minister of Finance from November 2015 to September 2018, and chaired the Board of the African Export-Import Bank while in office. Before that she was Commissioner for Finance in Ogun State.",
+    "She has since founded two ventures. DashMe Foundation raises resources for local charities that care for orphaned and vulnerable children, young people and women. Nidacity gives Nigerian entrepreneurs the knowledge and tools to build serious businesses.",
   ],
   location: "Nigeria · United Kingdom", // ⚠ confirm
 
@@ -87,19 +87,19 @@ export const profile = {
       icon: "children",
       title: "Children",
       description:
-        "Protecting and supporting orphaned and vulnerable children across West Africa.",
+        "Funding local charities that care for orphaned and vulnerable children.",
     },
     {
       icon: "youth",
       title: "Youth",
       description:
-        "Equipping a new generation with opportunity, mentorship and the tools to build.",
+        "Coaching young people through her ministry, and funding the charities that serve them.",
     },
     {
       icon: "women",
       title: "Women",
       description:
-        "Championing women, from survivors of abuse to founders growing businesses that last.",
+        "Backing the charities that work with vulnerable women.",
     },
   ] satisfies FocusArea[],
 
@@ -108,26 +108,23 @@ export const profile = {
     {
       role: "Early career",
       organisation: "British Telecom Plc",
-      detail: "Where she began her working life in the United Kingdom.",
+      detail: "Where her career began, in the UK.",
     },
     {
       role: "Senior managerial roles",
       organisation: "PricewaterhouseCoopers (UK)",
-      detail:
-        "Advising on finance across one of the world's largest professional services firms.",
     },
     {
       role: "Financial Controller to Managing Director",
       organisation: "Chapel Hill Denham Group",
-      detail:
-        "Returning to Nigeria and rising through the ranks of a leading investment banking group.",
+      detail: "In Nigeria, she rose from Financial Controller to Managing Director.",
     },
     {
       period: "To 2010",
       role: "Founder",
       organisation: "Independent consulting practice",
       detail:
-        "Ran her own consulting firm before answering the call to civic duty in 2010.",
+        "Ran her own consulting firm until she entered public service in 2010.",
     },
     {
       // ⚠ start year inferred from the biography's "call to civic duty in 2010"
@@ -141,7 +138,7 @@ export const profile = {
       role: "Minister of Finance",
       organisation: "Federal Republic of Nigeria",
       detail:
-        "November 2015 to September 2018. Chaired the Board of the African Export-Import Bank (AfreximBank) during her tenure.",
+        "November 2015 to September 2018. Chaired the Board of the African Export-Import Bank (Afreximbank) while in office.",
       highlight: true,
     },
   ] satisfies CareerMilestone[],
@@ -168,7 +165,7 @@ export const profile = {
 
   /** Away from the work. */
   interests: {
-    lead: "Beyond the charity work she is a family woman, and a passionate coach with a ministry focus on youth.",
+    lead: "Outside work she is a family woman and a coach, with a ministry focused on young people.",
     likes: ["Books", "Old school music", "Sudoku", "Yam porridge"],
   },
 
@@ -197,7 +194,7 @@ export const profile = {
       name: "DashMe Foundation",
       tagline: "Changing lives, one gift at a time",
       description:
-        "A social enterprise registered in Nigeria, the UK and the USA that mobilises resources for indigenous charities caring for orphaned and vulnerable children, youth and women. Its Dash Me Store sells new and gently used items across five branches, raising millions daily for those in need.",
+        "A social enterprise registered in Nigeria, the UK and the USA. It raises resources for local charities that care for orphaned and vulnerable children, young people and women. Its Dash Me Store sells new and gently used items across five branches and raises millions daily.",
       href: "https://dashme.org",
       hrefLabel: "dashme.org",
       monogram: "DM",
@@ -210,7 +207,7 @@ export const profile = {
       name: "Nidacity",
       tagline: "The audacity to start meets the edge to succeed",
       description:
-        "The definitive platform giving Nigerian entrepreneurs the inspiration, knowledge and tools to build serious businesses, with a particular eye on young and female founders.",
+        "A platform that gives Nigerian entrepreneurs the inspiration, knowledge and tools to build serious businesses.",
       href: "https://nidacity.com",
       hrefLabel: "nidacity.com",
       monogram: "Ni",

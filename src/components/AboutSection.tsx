@@ -10,8 +10,8 @@ export default function AboutSection() {
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-gold">
             Who she is
           </p>
-          <h2 className="mt-3 font-serif text-[clamp(1.9rem,4.5vw,2.75rem)] font-semibold leading-tight tracking-tight text-ink">
-            Experience in service of impact
+          <h2 className="mt-3 font-serif text-[clamp(1.9rem,4.5vw,2.75rem)] font-medium leading-tight tracking-tight text-ink">
+            Thirty-five years in finance
           </h2>
           <div className="mt-5 space-y-4 text-lg leading-relaxed text-muted">
             {profile.about.map((para) => (
@@ -30,7 +30,7 @@ export default function AboutSection() {
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-forest/5 text-forest ring-1 ring-forest/10 transition-colors duration-300 group-hover:bg-forest group-hover:text-cream">
                 <FocusIcon name={f.icon} width={26} height={26} />
               </div>
-              <h3 className="mt-5 font-serif text-xl font-semibold text-ink">
+              <h3 className="mt-5 font-serif text-xl font-medium text-ink">
                 {f.title}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">

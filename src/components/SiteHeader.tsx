@@ -31,7 +31,7 @@ export default function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8 lg:px-12">
         <a
           href="#top"
-          className={`font-serif text-lg font-semibold tracking-tight transition-colors ${
+          className={`font-serif text-lg font-medium tracking-tight transition-colors ${
             scrolled ? "text-ink" : "text-cream"
           }`}
         >

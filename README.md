@@ -110,7 +110,7 @@ instructions.
 
 ## What's included
 
-- **Editorial design:** ivory, forest-green, and gold, with Fraunces + Inter type.
+- **Editorial design:** ivory, forest-green, and gold, with Newsreader + Inter type.
 - **Perfect responsiveness:** verified with zero horizontal overflow on mobile
   and desktop; fluid type; scroll-reveal animations that respect
   `prefers-reduced-motion` and fall back gracefully with no JavaScript.

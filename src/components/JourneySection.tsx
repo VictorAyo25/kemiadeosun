@@ -9,11 +9,11 @@ export default function JourneySection() {
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-gold">
             The road here
           </p>
-          <h2 className="mt-3 font-serif text-[clamp(1.9rem,4.5vw,2.75rem)] font-semibold leading-tight tracking-tight text-ink">
+          <h2 className="mt-3 font-serif text-[clamp(1.9rem,4.5vw,2.75rem)] font-medium leading-tight tracking-tight text-ink">
             Career &amp; public service
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-muted">
-            Thirty-five years from the City of London to Nigeria&rsquo;s
+            From British Telecom and PwC in the UK to Nigeria&rsquo;s
             Ministry of Finance.
           </p>
         </Reveal>
@@ -44,7 +44,7 @@ export default function JourneySection() {
                     {m.period}
                   </p>
                 )}
-                <h3 className="mt-1.5 font-serif text-xl font-semibold leading-snug text-ink sm:text-[1.35rem]">
+                <h3 className="mt-1.5 font-serif text-xl font-medium leading-snug text-ink sm:text-[1.35rem]">
                   {m.role}
                 </h3>
                 <p className="mt-0.5 text-sm font-medium tracking-wide text-forest-500">
@@ -73,7 +73,7 @@ export default function JourneySection() {
                   className="mt-[0.55rem] h-1.5 w-1.5 shrink-0 rotate-45 bg-gold"
                 />
                 <div>
-                  <dt className="font-serif text-base font-semibold leading-snug text-ink">
+                  <dt className="font-serif text-base font-medium leading-snug text-ink">
                     {c.qualification}
                   </dt>
                   <dd className="mt-0.5 text-sm text-muted">{c.institution}</dd>

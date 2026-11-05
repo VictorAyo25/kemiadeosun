@@ -23,12 +23,12 @@ export default function ConnectSection() {
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-gold">
               Get in touch
             </p>
-            <h2 className="mt-3 font-serif text-[clamp(1.9rem,4.5vw,2.85rem)] font-semibold leading-tight tracking-tight text-cream">
+            <h2 className="mt-3 font-serif text-[clamp(1.9rem,4.5vw,2.85rem)] font-medium leading-tight tracking-tight text-cream">
               Let&rsquo;s connect
             </h2>
             <p className="mx-auto mt-4 max-w-md text-[0.95rem] leading-relaxed text-cream/75 lg:mx-0">
-              Follow along on social, or scan the code to open this card on
-              another device.
+              Follow her on social media, or scan the code to open this card
+              on another phone.
             </p>
 
             <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap lg:items-start lg:justify-start">
@@ -60,7 +60,7 @@ export default function ConnectSection() {
                   className="h-full w-full"
                 />
               </div>
-              <p className="mt-5 font-serif text-lg font-semibold text-ink">
+              <p className="mt-5 font-serif text-lg font-medium text-ink">
                 Scan to share
               </p>
               <p className="mt-1 text-sm text-muted">

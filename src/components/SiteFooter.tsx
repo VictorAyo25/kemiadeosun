@@ -6,7 +6,7 @@ export default function SiteFooter() {
   return (
     <footer className="border-t border-cream/10 bg-forest text-cream/70">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-8 sm:flex-row sm:px-8 lg:px-12">
-        <a href="#top" className="font-serif text-base font-semibold text-cream">
+        <a href="#top" className="font-serif text-base font-medium text-cream">
           {profile.name}
         </a>
 

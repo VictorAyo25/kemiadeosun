@@ -35,7 +35,7 @@ function VentureFeature({ venture, index }: { venture: Venture; index: number })
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-gold">
             Venture 0{index + 1}
           </p>
-          <h3 className="mt-3 font-serif text-[clamp(1.7rem,4vw,2.4rem)] font-semibold leading-tight tracking-tight text-ink">
+          <h3 className="mt-3 font-serif text-[clamp(1.7rem,4vw,2.4rem)] font-medium leading-tight tracking-tight text-ink">
             {venture.name}
           </h3>
           <p className="mt-2 font-serif text-lg italic text-gold">
@@ -81,7 +81,7 @@ export default function VenturesSection() {
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-gold">
             What she builds
           </p>
-          <h2 className="mt-3 font-serif text-[clamp(1.9rem,4.5vw,2.75rem)] font-semibold leading-tight tracking-tight text-ink">
+          <h2 className="mt-3 font-serif text-[clamp(1.9rem,4.5vw,2.75rem)] font-medium leading-tight tracking-tight text-ink">
             Her ventures
           </h2>
         </Reveal>

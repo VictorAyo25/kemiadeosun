@@ -24,7 +24,7 @@ export default function Hero() {
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-gold">
               {profile.eyebrow}
             </p>
-            <h1 className="mt-4 font-serif font-semibold leading-[1.02] tracking-tight text-cream [font-size:clamp(2.75rem,8vw,4.75rem)]">
+            <h1 className="mt-4 font-serif font-medium leading-[1.02] tracking-tight text-cream [font-size:clamp(2.75rem,8vw,4.75rem)]">
               {profile.name}
             </h1>
             <p className="mx-auto mt-5 max-w-md font-serif text-xl italic leading-snug text-gold-bright lg:mx-0 lg:text-2xl">
