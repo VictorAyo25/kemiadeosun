@@ -2,17 +2,13 @@
 
 ## Where things stand (2026-11-05)
 
-- Copy rewritten in plain language, sourced only from her biography PDF (untracked, kept local).
-- Serif switched to Newsreader (Victor picked it from a side-by-side).
-- Hero line changed from "Economist · Advocate · Founder"; "advocate" is not in her biography.
-- Commit `eff49b9` pushed to main, but Vercel blocked the deploy (see memory: account linkage).
-  Victor is making the GitHub repo public to unblock it. After that: push an empty commit and
-  check https://kemiadeosun.vercel.app shows the new copy.
-- Redesign built (2026-11-05) after a designer friend said the site "looks very Claude coded".
-  Lint and production build pass; checked by screenshot at 390px, 820px and 1440px, plus the share image.
-  Not committed yet: waiting for Victor to review at http://localhost:3000.
-- Next: Victor reviews; then commit, and once the repo is public, push and confirm the live site updates.
-- Open questions for Victor: are the two venture taglines the brands' real slogans? Is the ⚠ location right?
+- Live at https://kemiadeosun.vercel.app: plain-language copy, Newsreader, the redesign built
+  around her portrait, and new tab and home-screen icons (commits `8195c5d`, `b54f14c`).
+- Deploys work again: Victor made the GitHub repo public, and pushes to main go live in about 30s.
+- Save contact was removed at Victor's request; /api/vcard still exists, unlinked.
+- Open questions for Victor: are the two venture taglines the brands' real slogans? Is the
+  ⚠ location ("Nigeria · United Kingdom", not shown on the page now) right?
+- Next: designer friend's feedback on the redesign.
 
 ## Redesign plan
 
