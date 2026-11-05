@@ -1,19 +1,13 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Newsreader } from "next/font/google";
+import { Newsreader } from "next/font/google";
 import "./globals.css";
 import { profile, SITE_URL } from "@/data/profile";
 
 const newsreader = Newsreader({
   variable: "--font-newsreader",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
   style: ["normal", "italic"],
-  display: "swap",
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+  axes: ["opsz"],
   display: "swap",
 });
 
@@ -53,7 +47,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#12352a",
+  themeColor: "#ca3048",
   width: "device-width",
   initialScale: 1,
 };
@@ -64,7 +58,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${newsreader.variable} ${inter.variable} h-full antialiased`}
+      className={`${newsreader.variable} h-full antialiased`}
     >
       <body className="min-h-full">{children}</body>
     </html>

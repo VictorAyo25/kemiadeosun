@@ -35,21 +35,13 @@ export interface Venture {
   instagram?: string;
 }
 
-export type FocusIcon = "children" | "youth" | "women";
-
-export interface FocusArea {
-  icon: FocusIcon;
-  title: string;
-  description: string;
-}
-
 export interface CareerMilestone {
   /** dated only where the biography gives a date */
   period?: string;
   role: string;
   organisation: string;
   detail?: string;
-  /** public-service roles get the gold treatment in the timeline */
+  /** public-service roles are set larger, in red, in the timeline */
   highlight?: boolean;
 }
 
@@ -66,8 +58,6 @@ export const SITE_URL =
 
 export const profile = {
   name: "Kemi Adeosun",
-  /** eyebrow shown above the name in the hero */
-  eyebrow: "Former Finance Minister · Founder",
   /** shown under the name, in the page title, OG card and vCard note */
   role: "Economist & Chartered Accountant",
   tagline: "Backing vulnerable children, young people and women.",
@@ -80,28 +70,6 @@ export const profile = {
     "She has since founded two ventures. DashMe Foundation raises resources for local charities that care for orphaned and vulnerable children, young people and women. Nidacity gives Nigerian entrepreneurs the knowledge and tools to build serious businesses.",
   ],
   location: "Nigeria · United Kingdom", // ⚠ confirm
-
-  /** Three focus areas, drawn from her advocacy for children, youth & women. */
-  focus: [
-    {
-      icon: "children",
-      title: "Children",
-      description:
-        "Funding local charities that care for orphaned and vulnerable children.",
-    },
-    {
-      icon: "youth",
-      title: "Youth",
-      description:
-        "Coaching young people through her ministry, and funding the charities that serve them.",
-    },
-    {
-      icon: "women",
-      title: "Women",
-      description:
-        "Backing the charities that work with vulnerable women.",
-    },
-  ] satisfies FocusArea[],
 
   /** Career and public service, oldest first. */
   career: [
@@ -165,7 +133,7 @@ export const profile = {
 
   /** Away from the work. */
   interests: {
-    lead: "Outside work she is a family woman and a coach, with a ministry focused on young people.",
+    lead: "She is a family woman and a coach, with a ministry focused on young people.",
     likes: ["Books", "Old school music", "Sudoku", "Yam porridge"],
   },
 

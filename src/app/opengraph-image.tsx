@@ -22,9 +22,18 @@ function loadPhoto(): string | null {
   }
 }
 
+// Newsreader 500 (SIL Open Font License), bundled so the share image uses
+// the same type as the page. Satori reads .woff but not .woff2.
+const newsreader = readFileSync(
+  join(process.cwd(), "src", "app", "og-fonts", "newsreader-500.woff"),
+);
+
 export default function OpengraphImage() {
   const photo = loadPhoto();
+  const [first, ...rest] = profile.name.split(" ");
 
+  // Same idea as the page: her name on the red of her portrait, with the
+  // photo standing on the bottom edge.
   return new ImageResponse(
     (
       <div
@@ -32,151 +41,64 @@ export default function OpengraphImage() {
           width: "100%",
           height: "100%",
           display: "flex",
-          alignItems: "center",
-          gap: 56,
-          padding: 70,
-          background:
-            "linear-gradient(135deg, #163e2f 0%, #0e2a20 55%, #12352a 100%)",
-          color: "#f6f1e6",
-          fontFamily: "Georgia, serif",
+          background: "linear-gradient(180deg, #d0374f 0%, #c92f47 55%, #b9283f 100%)",
+          color: "#ffffff",
+          fontFamily: "Newsreader",
           position: "relative",
         }}
       >
-        {/* gold frame */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 28,
-            border: "1px solid rgba(199,162,75,0.5)",
-            borderRadius: 20,
-          }}
-        />
-
-        {/* Portrait */}
         <div
           style={{
             display: "flex",
-            width: 340,
-            height: 340,
-            borderRadius: 340,
-            flexShrink: 0,
-            background: "linear-gradient(135deg, #e3c877, #a9822d)",
-            padding: 6,
-            boxShadow: "0 20px 60px rgba(0,0,0,0.35)",
+            flexDirection: "column",
+            justifyContent: "center",
+            padding: "0 0 0 80px",
+            width: 640,
           }}
         >
-          {photo ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={photo}
-              alt=""
-              width={328}
-              height={328}
-              style={{
-                width: 328,
-                height: 328,
-                borderRadius: 328,
-                objectFit: "cover",
-                border: "4px solid #12352a",
-              }}
-            />
-          ) : (
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                width: 328,
-                height: 328,
-                borderRadius: 328,
-                background: "#12352a",
-                color: "#c7a24b",
-                fontSize: 130,
-                fontWeight: 700,
-              }}
-            >
-              KA
-            </div>
-          )}
-        </div>
-
-        {/* Text */}
-        <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-            <div style={{ width: 40, height: 2, background: "#c7a24b" }} />
-            <div
-              style={{
-                fontSize: 19,
-                letterSpacing: 9,
-                color: "#c7a24b",
-                textTransform: "uppercase",
-                fontFamily: "system-ui, sans-serif",
-                fontWeight: 600,
-              }}
-            >
-              Digital Card
-            </div>
+          <div style={{ fontSize: 132, lineHeight: 0.9, letterSpacing: -4 }}>
+            {first}
           </div>
-
-          <div
-            style={{
-              fontSize: 82,
-              fontWeight: 700,
-              lineHeight: 1.02,
-              marginTop: 18,
-            }}
-          >
-            {profile.name}
+          <div style={{ fontSize: 132, lineHeight: 0.9, letterSpacing: -4 }}>
+            {rest.join(" ")}
           </div>
-          {profile.role ? (
-            <div
-              style={{
-                fontSize: 27,
-                color: "#e8dfca",
-                fontFamily: "system-ui, sans-serif",
-                marginTop: 14,
-              }}
-            >
-              {profile.role}
-            </div>
-          ) : null}
-          <div
-            style={{
-              fontSize: 25,
-              color: "#c7a24b",
-              fontStyle: "italic",
-              marginTop: 10,
-            }}
-          >
-            {profile.tagline}
-          </div>
-
           <div
             style={{
               display: "flex",
-              alignItems: "center",
-              gap: 12,
-              fontSize: 21,
-              fontFamily: "system-ui, sans-serif",
-              color: "#e8dfca",
-              marginTop: 34,
+              flexDirection: "column",
+              fontSize: 28,
+              lineHeight: 1.4,
+              marginTop: 36,
+              color: "rgba(255,255,255,0.9)",
             }}
           >
-            <span style={{ fontWeight: 700 }}>DashMe Foundation</span>
-            <span
-              style={{
-                width: 7,
-                height: 7,
-                background: "#c7a24b",
-                borderRadius: 7,
-                transform: "rotate(45deg)",
-              }}
-            />
-            <span style={{ fontWeight: 700 }}>Nidacity</span>
+            <div>{`${profile.role}.`}</div>
+            <div>Nigeria&apos;s Minister of Finance, 2015 to 2018.</div>
           </div>
         </div>
+        {photo ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={photo}
+            alt=""
+            width={560}
+            height={560}
+            style={{
+              position: "absolute",
+              right: 0,
+              bottom: 0,
+              width: 600,
+              height: 600,
+              maskImage:
+                "linear-gradient(to right, transparent 0%, black 22%, black 85%, transparent 100%)",
+            }}
+          />
+        ) : null}
       </div>
     ),
-    { ...size },
+    {
+      ...size,
+      fonts: [{ name: "Newsreader", data: newsreader, weight: 500, style: "normal" }],
+    },
   );
 }

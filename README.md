@@ -2,16 +2,16 @@
 
 A world-class, fully-responsive landing page that doubles as a digital business
 card. Share the QR code and visitors arrive at a premium, multi-section site
-with her portrait, a one-tap **Save to Contacts** button, social links, and
+with her portrait, social links, and
 profiles of her two ventures: **DashMe Foundation** and **Nidacity**.
 
 Built with **Next.js 16 (App Router)**, **React 19**, and **Tailwind CSS v4**.
 Designed to deploy on **Vercel**.
 
-**Page structure:** sticky header, immersive hero, an About section with three
-focus areas (children, youth, women), a Journey section with her career,
-public-service timeline and qualifications, alternating venture features, and a
-Connect section with an on-screen QR to share the card in person.
+**Page structure:** a red hero built from her portrait (name, short bio,
+socials), then About, Ventures, Career, Education and Outside work on
+white, closing with a red contact band and an on-screen QR to share the card.
+The design notes and reasons live in [`STATE.md`](STATE.md).
 
 ---
 
@@ -36,14 +36,11 @@ immediately. To use her real portrait:
 > Also confirm the two items flagged in `profile.ts` (location, and any contact
 > details) before going live.
 
-## "Save to Contacts"
+## Contact file (not linked)
 
-The **Save to Contacts** button downloads a real `.vcf` contact card that iOS
-and Android recognise natively. To include her email or phone, add them to the
-`vcard` block in `profile.ts` (only if she is happy to publish them):
-```ts
-vcard: { ..., email: "hello@example.com", phone: "+234..." }
-```
+`/api/vcard` still serves a `.vcf` contact card built from the `vcard` block in
+`profile.ts`, but the page no longer links to it (removed 2026-11-05). To bring
+it back, add a link to `/api/vcard` in `ContactActions.tsx`.
 
 ---
 
@@ -110,13 +107,12 @@ instructions.
 
 ## What's included
 
-- **Editorial design:** ivory, forest-green, and gold, with Newsreader + Inter type.
+- **Design:** colours sampled from her portrait (crimson, wine, white), set in Newsreader.
 - **Perfect responsiveness:** verified with zero horizontal overflow on mobile
-  and desktop; fluid type; scroll-reveal animations that respect
-  `prefers-reduced-motion` and fall back gracefully with no JavaScript.
+  and desktop; fluid type; one load animation on the name and photo, off when
+  `prefers-reduced-motion` is set.
 - **Social share preview:** a branded Open Graph image (auto-applied to
   WhatsApp, iMessage, X, and LinkedIn) generated at `src/app/opengraph-image.tsx`.
 - **SEO:** title, description, keywords, canonical URL, robots.
 - **Accessibility:** semantic landmarks, aria-labels on every icon link,
   visible keyboard focus rings, and strong colour contrast.
-- **One-tap vCard** download for real contact-saving.
