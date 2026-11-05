@@ -74,5 +74,6 @@ Left aligned throughout. Section heading in a left column on desktop, above on m
 - `Section.tsx`: shared section layout (heading left on desktop).
 - About, Ventures, Career, Education, Outside work, then the red "Keep in touch" footer with QR.
 - Deleted: SiteHeader, SiteFooter, Reveal, focus cards, arrow and chevron icons, Inter.
+- Tab and home-screen icons (`icon.tsx`, `apple-icon.tsx`): "KA" in Newsreader on red; default favicon.ico removed.
 - Share image (`opengraph-image.tsx`) redrawn to match, with `src/app/og-fonts/newsreader-500.woff`
   (OFL, from Fontsource) because the image renderer cannot use Google-hosted fonts.
