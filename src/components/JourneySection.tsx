@@ -7,11 +7,15 @@ export default function JourneySection() {
   return (
     <>
       <Section id="career" title="Career">
-        <ol className="max-w-[38rem]">
+        <div className="career relative max-w-[38rem] pl-8">
+          <span aria-hidden="true" className="career-track" />
+          <span aria-hidden="true" className="career-fill" />
+          <ol>
           {profile.career.map((m) => (
             <li
               key={`${m.organisation}-${m.role}`}
-              className="border-t border-rule py-5 first:border-t-0 first:pt-0"
+              className="career-stop relative border-t border-rule py-5 first:border-t-0 first:pt-0"
+              data-highlight={m.highlight ? "" : undefined}
             >
               <h3
                 className={
@@ -36,7 +40,8 @@ export default function JourneySection() {
               {m.detail && <p className="mt-2">{m.detail}</p>}
             </li>
           ))}
-        </ol>
+          </ol>
+        </div>
       </Section>
 
       <Section id="education" title="Education">

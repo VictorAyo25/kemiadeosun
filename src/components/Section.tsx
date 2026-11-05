@@ -18,7 +18,7 @@ export default function Section({
     >
       <h2
         id={`${id}-title`}
-        className="text-[1.75rem] font-medium leading-tight tracking-[-0.01em] text-red-deep md:text-[1.5rem] md:leading-[2.1rem]"
+        className="text-[1.75rem] font-medium leading-tight tracking-[-0.01em] text-red-deep md:sticky md:top-10 md:self-start md:text-[1.5rem] md:leading-[2.1rem]"
       >
         {title}
       </h2>

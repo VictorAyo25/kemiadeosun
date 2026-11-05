@@ -29,11 +29,13 @@ function listSentence(items: readonly string[]) {
 
 export function OutsideWorkSection() {
   return (
-    <Section id="outside-work" title="Outside work">
-      <p className="max-w-[36rem] text-[1.375rem] italic leading-[1.45]">
-        {profile.interests.lead} She enjoys{" "}
-        {listSentence(profile.interests.likes)}.
-      </p>
-    </Section>
+    <div className="bg-blush">
+      <Section id="outside-work" title="Outside work">
+        <p className="max-w-[36rem] text-[1.375rem] italic leading-[1.45]">
+          {profile.interests.lead} She enjoys{" "}
+          {listSentence(profile.interests.likes)}.
+        </p>
+      </Section>
+    </div>
   );
 }

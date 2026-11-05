@@ -1,38 +1,33 @@
+import ShareButton from "@/components/ShareButton";
 import { SocialIcon } from "@/components/icons";
 import { profile } from "@/data/profile";
 
 /**
- * Social links. `tone` sets the colours for the surface it
- * sits on: "paper" on white, "red" on the red field. `heroSwitch` is for the
- * hero block, which sits on white on phones and tablets, and on red from lg up.
+ * Social links + share. `tone` sets the colours for the surface it sits on:
+ * "red" on the red field; "heroSwitch" for the hero block, which sits on
+ * white on phones and tablets, and on red from lg up.
  */
-export default function ContactActions({
-  tone,
-}: {
-  tone: "paper" | "red" | "heroSwitch";
-}) {
-  const link =
-    tone === "red"
-      ? "text-paper decoration-paper/40 hover:decoration-paper"
-      : tone === "paper"
-        ? "text-wine decoration-wine/30 hover:decoration-wine"
-        : "text-wine decoration-wine/30 hover:decoration-wine lg:text-paper lg:decoration-paper/40 lg:hover:decoration-paper";
+export default function ContactActions({ tone }: { tone: "red" | "heroSwitch" }) {
+  const colour = tone === "red" ? "text-paper" : "text-wine lg:text-paper";
 
   return (
-    <ul className="flex items-center gap-6">
+    <ul className={`flex flex-wrap items-center gap-x-7 gap-y-4 ${colour}`}>
       {profile.socials.map((s) => (
         <li key={s.label}>
           <a
             href={s.href}
             target="_blank"
             rel="noopener noreferrer"
-            className={`inline-flex items-center gap-2 underline decoration-1 underline-offset-[5px] transition-colors ${link}`}
+            className="lnk inline-flex items-center gap-2"
           >
-            <SocialIcon name={s.icon} width={17} height={17} />
+            <SocialIcon name={s.icon} width={17} height={17} className="lnk-icon" />
             {s.label}
           </a>
         </li>
       ))}
+      <li>
+        <ShareButton />
+      </li>
     </ul>
   );
 }

@@ -24,7 +24,7 @@ const options = {
   errorCorrectionLevel: "H", // survives a small logo / print smudges
   margin: 2,
   color: {
-    dark: "#12352a", // forest green
+    dark: "#2b0b13", // wine-black, the page text colour
     light: "#00000000", // transparent, sits on any background
   },
 };
